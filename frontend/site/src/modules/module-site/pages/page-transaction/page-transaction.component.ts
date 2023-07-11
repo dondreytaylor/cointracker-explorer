@@ -22,7 +22,7 @@ export class PageTransactionComponent implements OnInit {
   ngOnInit(): void {
     this.isFetching = true;
     this.router.queryParams.pipe().subscribe(queryParams=> {
-      if (queryParams.addr != undefined) {
+      if (queryParams.tx != undefined) {
         // this.blockchain.getBTCTransaction(queryParams.tx).pipe().subscribe(data=> {
           //  this.transactionData = data;
             this.isFetching = false;
