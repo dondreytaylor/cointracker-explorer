@@ -1,5 +1,11 @@
 'use strict';
 
+// Used to load variables from .env
+import * as dotenv from 'dotenv';
+
+// Load variables for .env
+dotenv.config();
+
 /**
  *
  * Used to reference package.json

@@ -5,6 +5,8 @@
  */
 import * as Hapi from '@hapi/hapi';
 
+// Fetch 
+import fetch from 'node-fetch';
 
 /**
  *
@@ -13,9 +15,11 @@ import * as Hapi from '@hapi/hapi';
  */
 let Endpoint: Hapi.ServerRoute =  {
     method: "GET",
-    path: "/v1/btc/transaction",
-    handler: (request, h) => {
-        return "Hello World!";
+    path: "/v1/bitcoin/transaction",
+    handler: async (request, h) => {
+        let tx:string = request.query.tx != undefined ? request.query.tx : ""; 
+        let response = await fetch(`${process.env.BLOCKCHAIN_API_BASE_TX}/${tx}`);
+        return response.json()
     }
 
 };
