@@ -18,8 +18,13 @@ let Endpoint: Hapi.ServerRoute =  {
     path: "/v1/bitcoin/address",
     handler: async (request, h) => {
         let addr:string = request.query.addr != undefined ? request.query.addr : ""; 
-        let response =  await fetch(`${process.env.BLOCKCHAIN_API_BASE_ADDR}/${addr}`);
-        return response.json()
+        try { 
+            let response =  await fetch(`${process.env.BLOCKCHAIN_API_BASE_ADDR}/${addr}`);
+            return await response.json()
+        }
+        catch (e) {
+            return {}
+        }
     }
 
 };

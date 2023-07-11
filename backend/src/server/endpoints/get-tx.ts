@@ -18,8 +18,13 @@ let Endpoint: Hapi.ServerRoute =  {
     path: "/v1/bitcoin/transaction",
     handler: async (request, h) => {
         let tx:string = request.query.tx != undefined ? request.query.tx : ""; 
-        let response = await fetch(`${process.env.BLOCKCHAIN_API_BASE_TX}/${tx}`);
-        return response.json()
+        try { 
+            let response = await fetch(`${process.env.BLOCKCHAIN_API_BASE_TX}/${tx}`);
+            return await response.json()
+        }
+        catch (e) {
+            return {}
+        }
     }
 
 };

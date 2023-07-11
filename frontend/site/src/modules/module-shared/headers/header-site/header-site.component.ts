@@ -16,6 +16,7 @@ export class HeaderSiteComponent implements OnInit {
 
   trackedAddresses:string[] = []; 
   
+  fieldSearch:string = ""
   fieldAddAddress:string = ""; 
   fieldRemoveAddressIndex:number = -1
 
@@ -23,6 +24,9 @@ export class HeaderSiteComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.route.queryParams.pipe().subscribe(data=> {
+      this.fieldSearch = data.addr || "";
+    })
   }
 
   openSidebar() {
@@ -63,5 +67,10 @@ export class HeaderSiteComponent implements OnInit {
   removeAddress() { 
     this.trackedAddresses.splice(this.fieldRemoveAddressIndex, 1);
     this.hidePopups();
+  }
+
+  search() {
+    //this.router.navigateByUrl("/bitcoin/address?addr=" + this.fieldSearch);
+    window.location.href = "/bitcoin/address?addr=" + this.fieldSearch
   }
 }

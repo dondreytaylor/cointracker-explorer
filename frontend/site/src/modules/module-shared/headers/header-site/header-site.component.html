@@ -2,7 +2,7 @@
     <div data-name="holder">
         <div data-name="logo"></div>
         <div data-name="field">
-            <app-input-text placeholder="Search by bitcoin address to view transactions..."></app-input-text>
+            <app-input-text [(inputField)]="fieldSearch" (inputFieldEnter)="search()" placeholder="Search by bitcoin address... (Press enter to search)"></app-input-text>
         </div>
         <a href="javascript:void(0);" data-name="menu" (click)="openSidebar()">
             <div data-name="icon"></div>

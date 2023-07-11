@@ -24,12 +24,12 @@ export class PageAddressComponent implements OnInit {
     this.isFetching = true;
     this.router.queryParams.pipe().subscribe(queryParams=> {
       if (queryParams.addr != undefined) {
-        //this.blockchain.getBTCAddress(queryParams.addr).pipe().subscribe(data=> {
-         //   this.addressData = data;
-         setTimeout(() => {
-          this.isFetching = false;
-        },1000);
-        //})
+        // this.blockchain.getBTCAddress(queryParams.addr).pipe().subscribe(data=> {
+          // this.addressData = data;
+          setTimeout(() => {
+            this.isFetching = false;
+          },1000);
+        // })
       }
       else {
         this.isFetching = true;
