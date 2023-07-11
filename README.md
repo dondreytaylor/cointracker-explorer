@@ -10,6 +10,9 @@ The technologies used for this demo includes:
 - Angular (version 14) setup for server-side rendering
 - TypeScript + SASS
 
+> ** IMPORTANT**: There was a number of time when I ran into API limits. If you do not get any addresses / transactions returned when searching, please change your IP address or as a last result, please comment in the dummy address and transactions data found withhin `pages/page-address` and `pages/page-transaction`. You'll also need to comment out the lines setting `addressData` and `transactionsData` within the return/callback of the BlockchainCOM service. 
+
+
 ###  Running the Demonstration
 
 To run this application you'll want to open two seperate tabs in terminal/CMD: one for running the backend code base, and the other tab for running the frontend. 
@@ -98,4 +101,16 @@ To communicate with backend endpoints, I created a dedicated service called `Blo
 
 > **Please Note**: There are some aspects of the frontend that I was unable to polish due to time constrant such as: validaton on the search and add address fields, and preventing non-BTC addresses from being added. 
 
+
 ###  Backend Development Decisions
+
+The backend is a simple API consisting of two endpoints that proxy directly to blockchain.com. 
+
+- **[GET]** */v1/bitcoin/address* - this endpoint accepts a single query parameter with the name `addr` and should be a fully valid Base58 BTC address
+
+- **[GET]** */v1/bitcoin/transaction* - this endpoint accepts a single query parameter with the name `tx` and should be a fully valid BTC transaction hash
+
+The response for each which follow the address lookup and transaction look up endpoints from blockchain.com verbatum. 
+
+> **Please be advised**: The blockchain.com has very low limits around their API and so it's easy to get a 429 or 1015 error from their cloudflair firewall. If this happens, please change your IP or use dummy data on the frontend to test the UI. 
+
