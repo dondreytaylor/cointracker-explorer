@@ -33,7 +33,7 @@ npm run build && npm run dev:serve
 
 ![CoinTracker-Preview-1](design/previews-readme/preview-backend-start.png)
 
-Now that the backend has been started, we can proceed with running our frontend. To run the frontend, navigate to the `frontend` folder within terminal/CMD and run the following to install dependencies:
+Now that the backend has been started, we can proceed with running our frontend. To run the frontend, navigate to the `frontend/site` folder within terminal/CMD and run the following to install dependencies:
 
 ```shell
 npm install
