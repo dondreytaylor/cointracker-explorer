@@ -2,53 +2,42 @@
 <main>
     <section data-name="transaction">
         <div data-name="holder">
-            <div data-name="top">
+            <div data-name="bitcoin-background"  *ngIf="!transactionData.hash"></div>
+            <div data-name="top" *ngIf="transactionData.hash">
                 <span>Bitcoin Transaction</span>
-                <strong>a6219d47d1113bd9e27d505171b28bbd60150b17361dfa3c49d76c4d4a51c7a2</strong>
+                <strong>{{transactionData.hash}}</strong>
                 <div data-name="details">
                     <div data-name="info">
-                        <strong>10 BTC</strong>
+                        <strong>-- BTC</strong>
                     </div>
                     <div data-name="info">
                         <strong>Fee: </strong>
-                        <span>100 SATS</span>
+                        <span>{{transactionData.fee/BTCUnits.SATOSHIS}} BTC</span>
                     </div>
                     <div data-name="info">
                         <strong>Block: </strong>
-                        <span>395953</span>
+                        <span>{{transactionData.block_height || "--"}}</span>
                     </div>
                 </div>
             </div>
-            <div data-name="bottom">
+            <div data-name="bottom" *ngIf="transactionData.hash">
                 <span>Details</span>
                 <div data-name="overview">
                     <div data-name="left">
                         <strong>From</strong>
                         <div data-name="inputs">
-                            <div data-name="input">
-                                <a href="javascript:void(0);">1FwYmGEjXhMtxpWDpUXwLx7ndLNfFQncKq</a>
-                                <span>1.0000 BTC</span>
+                            <div data-name="input" *ngFor="let input of transactionData.inputs">
+                                <a [href]="'/bitcoin/address?addr='+ input.prev_out.addr">{{input.prev_out.addr}}</a>
+                                <span>{{input.prev_out.value/BTCUnits.SATOSHIS}} BTC</span>
                             </div>
                         </div>
                     </div>
                     <div data-name="right">
                         <strong>To</strong>
                         <div data-name="outputs">
-                            <div data-name="output">
-                                <a href="javascript:void(0);">1FwYmGEjXhMtxpWDpUXwLx7ndLNfFQncKq</a>
-                                <span>1.0000 BTC</span>
-                            </div>
-                            <div data-name="output">
-                                <a href="javascript:void(0);">1FwYmGEjXhMtxpWDpUXwLx7ndLNfFQncKq</a>
-                                <span>1.0000 BTC</span>
-                            </div>
-                            <div data-name="output">
-                                <a href="javascript:void(0);">1FwYmGEjXhMtxpWDpUXwLx7ndLNfFQncKq</a>
-                                <span>1.0000 BTC</span>
-                            </div>
-                            <div data-name="output">
-                                <a href="javascript:void(0);">1FwYmGEjXhMtxpWDpUXwLx7ndLNfFQncKq</a>
-                                <span>1.0000 BTC</span>
+                            <div data-name="output"*ngFor="let output of transactionData.out">
+                                <a [href]="'/bitcoin/address?addr='+ output.addr">{{output.addr}}</a>
+                                <span>{{output.value/BTCUnits.SATOSHIS}} BTC</span>
                             </div>
                         </div>
                     </div>

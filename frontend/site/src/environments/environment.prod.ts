@@ -17,7 +17,7 @@ export const environment = {
      appleStoreLink: "",
      playStoreLink: "",
      url:"http://localhost:4200",
-     siteName:"Phunds",
+     siteName:"CoinTracker",
      deepLinkBase: "",
      cardType: "summary_large_image",
   },
