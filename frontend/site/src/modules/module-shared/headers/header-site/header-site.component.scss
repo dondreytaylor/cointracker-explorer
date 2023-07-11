@@ -89,6 +89,7 @@ div[data-name="popup-sidebar"] {
     right: 0;
     box-sizing: border-box;
     padding: 2rem;
+    overflow-y: auto;
     & > strong {
       font-size: 1.1rem;
       display: block;
@@ -105,6 +106,41 @@ div[data-name="popup-sidebar"] {
       margin: 0 0 1rem 0;
       color: #B9B7B7;
     }
+    & > div[data-name="addresses"] {
+      margin: 0 0 2rem 0;
+      & > div[data-name="address"] {
+        padding: 1rem 0;
+        &:not(:last-child) {
+          border-bottom: 0.05rem solid #EEEEEE;
+        }
+        div[data-name="icon"] {
+          display: inline-block;
+          margin: 0 0.5rem 0 0;
+          width: 2rem;
+          height: 2rem;
+          background-position: center center;
+          background-repeat: no-repeat;
+          background-size: contain;
+          background-image: url(/assets/module-shared/headers/header/bitcoin-icon.svg);
+          vertical-align: middle;
+        }
+        a[data-name="address"] {
+          font-size: 0.9rem;
+          text-decoration: none;
+          color: #0182FF;
+          display: inline-block;
+          margin: 0 0 0.5rem 0;
+          vertical-align: middle;
+        }
+        a[data-name="remove"] {
+          font-size: 0.8rem;
+          text-decoration: none;
+          color: #666666;
+          display: block;
+          text-align: right;
+        }
+      }
+    }
     & > a[data-name="button"] {
       display: block;
       max-width: 30rem;
@@ -118,5 +154,38 @@ div[data-name="popup-sidebar"] {
       margin: 0 auto;
       text-decoration: none;
     }
+  }
+}
+
+div[data-name="popup-remove"],
+div[data-name="popup-add"] {
+  position: fixed;
+  z-index: 1001;
+  left: 0;
+  top: 0; 
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  &.visible {
+    display: block;
+  }
+  div[data-name="overlay"] {
+    position: absolute;
+    z-index: 1;
+    width: inherit;
+    height: inherit;
+    background-color: rgba(0,0,0,0.8);
+  }
+  div[data-name="popup"] {
+    position: absolute;
+    z-index: 2;
+    left: 50%;
+    margin-left: -15%;
+    top: 15%;
+    border-radius: 0.5rem;
+    width: 30rem;
+    background-color: #FFFFFF;
+    box-sizing: border-box;
+    padding: 2rem;
   }
 }

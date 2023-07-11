@@ -11,6 +11,8 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class HeaderSiteComponent implements OnInit {
 
   isSideBarVisible:boolean = false; 
+  isPopupAddVisible:boolean = false; 
+  isPopupRemoveVisible:boolean = false;
 
   constructor(private route:ActivatedRoute, private router:Router, private windowScrollingService: services.WindowScrollingService) {
   }
@@ -26,4 +28,16 @@ export class HeaderSiteComponent implements OnInit {
     this.isSideBarVisible = false;
   }
 
+  openAddPopup() {
+    this.isPopupAddVisible = true;
+  }
+
+  openRemovePopup(index:number) {
+    this.isPopupRemoveVisible = true;
+  }
+
+  hidePopups() {
+    this.isPopupAddVisible = false;
+    this.isPopupRemoveVisible = false;
+  }
 }
