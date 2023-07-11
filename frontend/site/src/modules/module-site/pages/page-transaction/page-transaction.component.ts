@@ -25,7 +25,9 @@ export class PageTransactionComponent implements OnInit {
       if (queryParams.tx != undefined) {
         // this.blockchain.getBTCTransaction(queryParams.tx).pipe().subscribe(data=> {
           //  this.transactionData = data;
-            this.isFetching = false;
+            setTimeout(() => {
+              this.isFetching = false;
+            },1000);
         // })
       }
       else {

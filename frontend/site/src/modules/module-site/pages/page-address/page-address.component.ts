@@ -26,7 +26,9 @@ export class PageAddressComponent implements OnInit {
       if (queryParams.addr != undefined) {
         //this.blockchain.getBTCAddress(queryParams.addr).pipe().subscribe(data=> {
          //   this.addressData = data;
-            this.isFetching = false;
+         setTimeout(() => {
+          this.isFetching = false;
+        },1000);
         //})
       }
       else {
