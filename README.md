@@ -10,7 +10,7 @@ The technologies used for this demo includes:
 - Angular (version 14) setup for server-side rendering
 - TypeScript + SASS
 
-> ** IMPORTANT**: There was a number of times when I ran into API limits with blockchain.com. If you do not get any addresses / transactions returned when searching, please change your IP address or as a last resort, please comment in the dummy address and transactions data found withhin `pages/page-address` and `pages/page-transaction`. You'll also need to comment out the lines setting `addressData` and `transactionsData` within the return/callback of the BlockchainCOM service. 
+> **IMPORTANT**: There was a number of times when I ran into API limits with blockchain.com. If you do not get any addresses / transactions returned when searching, please change your IP address or as a last resort, please comment in the dummy address and transactions data found withhin `pages/page-address` and `pages/page-transaction`. You'll also need to comment out the lines setting `addressData` and `transactionsData` within the return/callback of the BlockchainCOM service. 
 
 
 ###  Running the Demonstration
