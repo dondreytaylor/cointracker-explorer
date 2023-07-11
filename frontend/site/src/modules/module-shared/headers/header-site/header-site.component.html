@@ -14,11 +14,11 @@
     <div data-name="overlay" (click)="hideSidebar()"></div>
     <div data-name="sidebar">
         <strong>My Bitcoin Addresses</strong>
-        <!-- <p>You have not yet added any addresses to track.</p> -->
-        <div data-name="addresses">
-            <div data-name="address" *ngFor="let address of [0,1,2,3,4];  let i = index">
+        <p *ngIf="trackedAddresses.length === 0">You have not yet added any addresses to track.</p>
+        <div data-name="addresses" *ngIf="trackedAddresses.length > 0">
+            <div data-name="address" *ngFor="let address of trackedAddresses;  let i = index">
                 <div data-name="icon"></div>
-                <a href="javascript:void(0);" data-name="address">1FwYmGEjXhMtxpWDpUXwLx7ndLNfFQncKq</a>
+                <a [href]="'/bitcoin/address?addr=' + address" data-name="address">{{address}}</a>
                 <a href="javascript:void(0);" data-name="remove"  (click)="openRemovePopup(i)">remove</a>
             </div>
         </div>
@@ -31,10 +31,10 @@
     <div data-name="overlay" (click)="hidePopups()"></div>
     <div data-name="popup">
         <strong>Add Bitcoin Address</strong>
-        <p>Enter the bitcoin address that you would like to start tracking. Tracked bitcoin addresses will allow you view balances, and synchronize transactions.</p>
-        <app-input-text></app-input-text>
-        <div data-name="options">
-            <a href="javascript:void(0);">Track Address</a>
+        <p>Tracked bitcoin addresses will allow you view balances, and synchronize transactions.</p>
+        <app-input-text [(inputField)]="fieldAddAddress" placeholder="Enter BTC address here..."></app-input-text>
+        <div data-name="option">
+            <a href="javascript:void(0);" data-name="button" [ngClass]="{disabled:!canAddAddress()}" (click)="addAddress()">Track Address</a>
         </div>
     </div>
 </div>
@@ -43,10 +43,10 @@
     <div data-name="overlay" (click)="hidePopups()"></div>
     <div data-name="popup">
         <strong>Remove Bitcoin Address</strong>
-        <p>Would you like to stop tracking the following address? <strong>1FwYmGEjXhMtxpWDpUXwLx7ndLNfFQncKq</strong></p>
+        <p>Would you like to stop tracking the following address? <strong>{{this.trackedAddresses[this.fieldRemoveAddressIndex]}}</strong></p>
         <div data-name="options">
-            <a href="javascript:void(0);">Yes</a>
-            <a href="javascript:void(0);">No</a>
+            <a href="javascript:void(0);" data-name="button" (click)="removeAddress()">Yes</a>
+            <a href="javascript:void(0);" data-name="button" class="alt" (click)="hidePopups()">No</a>
         </div>
     </div>
 </div>

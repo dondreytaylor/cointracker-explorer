@@ -182,10 +182,59 @@ div[data-name="popup-add"] {
     left: 50%;
     margin-left: -15%;
     top: 15%;
-    border-radius: 0.5rem;
+    border-radius: 1rem;
     width: 30rem;
     background-color: #FFFFFF;
     box-sizing: border-box;
     padding: 2rem;
+    & > strong {
+      display: block;
+      text-align: center;
+      margin: 0 0 0.5rem 0;
+    }
+    & > p {
+      font-size: 0.9rem;
+      line-height: 1.5;
+      text-align: center;
+      margin: 0 0 1rem 0;
+      display: block;
+    }
+    app-input-text {
+      display: block;
+      margin: 0 0 2rem 0;
+    }
+    a[data-name="button"] {
+      display: inline-block;
+      padding: 1rem 3rem;
+      border-radius: 2rem;
+      text-align: center;
+      background-color: #0182FF;
+      color: #FFFFFF;
+      font-size: 0.8rem;
+      margin: 0 auto;
+      text-decoration: none;
+      &.disabled {
+        background-color: #BDBDBD;
+        color: #7D7C7C;
+      }
+      &.alt {
+        background-color: #BDBDBD;
+        color: #666666;
+      }
+    }
+    div[data-name="option"] { 
+      a[data-name="button"] {
+        display: block;
+        width: 80%;
+      }
+    }
+    div[data-name="options"] { 
+      text-align: center;
+      a[data-name="button"] {
+        display: inline-block;
+        margin: 0 1rem;
+      }
+    }
+
   }
 }

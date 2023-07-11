@@ -14,6 +14,11 @@ export class HeaderSiteComponent implements OnInit {
   isPopupAddVisible:boolean = false; 
   isPopupRemoveVisible:boolean = false;
 
+  trackedAddresses:string[] = []; 
+  
+  fieldAddAddress:string = ""; 
+  fieldRemoveAddressIndex:number = -1
+
   constructor(private route:ActivatedRoute, private router:Router, private windowScrollingService: services.WindowScrollingService) {
   }
 
@@ -34,10 +39,29 @@ export class HeaderSiteComponent implements OnInit {
 
   openRemovePopup(index:number) {
     this.isPopupRemoveVisible = true;
+    this.fieldRemoveAddressIndex = index;
   }
 
   hidePopups() {
     this.isPopupAddVisible = false;
     this.isPopupRemoveVisible = false;
+    this.fieldRemoveAddressIndex = -1;
+    this.fieldAddAddress = "";
+  }
+  
+  canAddAddress():boolean {
+    return this.fieldAddAddress.length > 0;
+  }
+
+  addAddress() {
+    if (this.canAddAddress()) { 
+      this.trackedAddresses.push(this.fieldAddAddress);
+      this.hidePopups();
+    }
+  }
+
+  removeAddress() { 
+    this.trackedAddresses.splice(this.fieldRemoveAddressIndex, 1);
+    this.hidePopups();
   }
 }
