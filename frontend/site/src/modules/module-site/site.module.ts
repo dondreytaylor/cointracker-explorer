@@ -14,8 +14,6 @@ import { DirectivesList } from './directives/directives';
 // Internal imports
 import { SharedModule } from '../module-shared/shared.module';
 import { SiteRoutingModule } from './site-routing.module';
-import { PageAddressComponent } from './pages/page-address/page-address.component';
-import { PageTransactionComponent } from './pages/page-transaction/page-transaction.component';
 
 
 @NgModule({
@@ -25,8 +23,6 @@ import { PageTransactionComponent } from './pages/page-transaction/page-transact
     DirectivesList,
     SectionsComponents,
     ElementsComponents,
-    PageAddressComponent,
-    PageTransactionComponent,
   ],
   imports: [BrowserModule, SiteRoutingModule, SharedModule],
   exports: [ElementsComponents],
