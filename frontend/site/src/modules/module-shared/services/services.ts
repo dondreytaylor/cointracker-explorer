@@ -1,7 +1,7 @@
 import * as services from './services.barrel';
 
 export const SharedServicesList = [
-  services.UserService,
+  services.BlockchainCOM,
   services.ScriptService,
   services.ValidationService,
   services.TitleMetaService,

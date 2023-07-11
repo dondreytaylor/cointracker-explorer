@@ -66,7 +66,10 @@ const initServer = async function (): Promise<Server> {
     // Create a Hapi Server
     server = Hapi.server({
         port: process.env.PORT || 8888,
-        host: '0.0.0.0'
+        host: '0.0.0.0',
+        routes: {
+            cors: true
+        }
     });
 
     // Register relevant plugins

@@ -2,11 +2,11 @@ export const environment = {
   production: true,
   api: {
       gateway: {
-          endpoint: "https://localhost:8000"
+          endpoint: "http://localhost:8000"
       }
   },
   site: {
-     endpoint: "https://localhost:4200",
+     endpoint: "http://localhost:4200",
      title: "CoinTracker",
      description: "",
      keywords: [],
@@ -16,7 +16,7 @@ export const environment = {
      playStoreID: "",
      appleStoreLink: "",
      playStoreLink: "",
-     url:"https://localhost:4200",
+     url:"http://localhost:4200",
      siteName:"Phunds",
      deepLinkBase: "",
      cardType: "summary_large_image",

@@ -1,4 +1,4 @@
-export * from "./user/user.service"
+export * from "./blockchaincom/blockchaincom.service"
 export * from "./script/script.service"
 export * from "./validation/validation.service"
 export * from "./title-meta/title-meta.service"
