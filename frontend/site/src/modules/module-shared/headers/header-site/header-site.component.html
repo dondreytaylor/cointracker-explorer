@@ -4,15 +4,18 @@
         <div data-name="field">
             <app-input-text placeholder="Search by bitcoin address to view transactions..."></app-input-text>
         </div>
-        <a href="javascript:void(0);" data-name="menu">
+        <a href="javascript:void(0);" data-name="menu" (click)="openSidebar()">
             <div data-name="icon"></div>
         </a>
     </div>
 </header>
 
 
-<div data-name="popup-sidebar">
-    <div data-name="overlay"></div>
+<div data-name="popup-sidebar" [ngClass]="{visible:isSideBarVisible}">
+    <div data-name="overlay" (click)="hideSidebar()"></div>
     <div data-name="sidebar">
+        <strong>My Bitcoin Addresses</strong>
+        <p>You have not yet added any addresses to track.</p>
+        <a href="javascript:void(0);" data-name="button">Add Address</a>
     </div>
 </div>

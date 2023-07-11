@@ -10,10 +10,20 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class HeaderSiteComponent implements OnInit {
 
+  isSideBarVisible:boolean = false; 
+
   constructor(private route:ActivatedRoute, private router:Router, private windowScrollingService: services.WindowScrollingService) {
   }
 
   ngOnInit(): void {
+  }
+
+  openSidebar() {
+    this.isSideBarVisible = true;
+  }
+
+  hideSidebar() { 
+    this.isSideBarVisible = false;
   }
 
 }

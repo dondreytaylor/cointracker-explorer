@@ -61,3 +61,62 @@ header {
   }
   
 }
+
+div[data-name="popup-sidebar"] {
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0; 
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  &.visible {
+    display: block;
+  }
+  div[data-name="overlay"] {
+    position: absolute;
+    z-index: 1;
+    width: inherit;
+    height: inherit;
+    background-color: rgba(0,0,0,0.8);
+  }
+  div[data-name="sidebar"] {
+    position: absolute;
+    z-index: 2;
+    width: 40%;
+    height: inherit; 
+    background-color: #FFFFFF;
+    right: 0;
+    box-sizing: border-box;
+    padding: 2rem;
+    & > strong {
+      font-size: 1.1rem;
+      display: block;
+      text-decoration: none;
+      text-align: center;
+      margin: 0 0 0.5rem 0;
+      color: #7E7E7E;
+    }
+    & > p {
+      font-size: 0.9rem;
+      display: block;
+      text-decoration: none;
+      text-align: center;
+      margin: 0 0 1rem 0;
+      color: #B9B7B7;
+    }
+    & > a[data-name="button"] {
+      display: block;
+      max-width: 30rem;
+      width: 80%;
+      padding: 1rem;
+      border-radius: 2rem;
+      text-align: center;
+      background-color: #0182FF;
+      color: #FFFFFF;
+      font-size: 0.8rem;
+      margin: 0 auto;
+      text-decoration: none;
+    }
+  }
+}
