@@ -20,6 +20,7 @@ let Endpoint: Hapi.ServerRoute =  {
         let addr:string = request.query.addr != undefined ? request.query.addr : ""; 
         try { 
             let response =  await fetch(`${process.env.BLOCKCHAIN_API_BASE_ADDR}/${addr}`);
+            console.log(response.status, response.statusText);
             return await response.json()
         }
         catch (e) {

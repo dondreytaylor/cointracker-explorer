@@ -15,7 +15,8 @@ export class PageTransactionComponent implements OnInit {
   BTCUnits = BTCUnits
   BTCTransactionData = BTCTransactionData
 
-  transactionData:any = BTCTransactionData.Transactions["3c2b594017776a8f277c5c021564c2302cb4ecbb2997d257b2c916e01e5f4b24"];
+  transactionData:any = {}
+  // transactionData:any = BTCTransactionData.Transactions["3c2b594017776a8f277c5c021564c2302cb4ecbb2997d257b2c916e01e5f4b24"];
   
   constructor(private blockchain:services.BlockchainCOM, private router: ActivatedRoute) { }
 
@@ -23,15 +24,15 @@ export class PageTransactionComponent implements OnInit {
     this.isFetching = true;
     this.router.queryParams.pipe().subscribe(queryParams=> {
       if (queryParams.tx != undefined) {
-        // this.blockchain.getBTCTransaction(queryParams.tx).pipe().subscribe(data=> {
-          //  this.transactionData = data;
+        this.blockchain.getBTCTransaction(queryParams.tx).pipe().subscribe(data=> {
+           this.transactionData = data;
             setTimeout(() => {
               this.isFetching = false;
             },1000);
-        // })
+        })
       }
       else {
-        this.isFetching = true;
+        this.isFetching = false;
       }
     })
   }
