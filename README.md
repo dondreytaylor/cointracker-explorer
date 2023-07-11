@@ -85,7 +85,7 @@ Tapping on a transaction from the address page will reveal details about the tra
 ![CoinTracker-Preview-9](design/previews/preview-transaction.png)
 
 
-###  Frontend Development Decisionsa
+###  Frontend Development Decisions
 
 While React could have been used to create the frontend of this demo, I decided to use Angular for a number or reasons including: out of the box page routing, reusuable component library, and tooling. To get a better understanding of how the application is structured on the frontend, I'll explain the folder structure.
 
