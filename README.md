@@ -114,3 +114,7 @@ The response for each which follow the address lookup and transaction look up en
 
 > **Please be advised**: The blockchain.com has very low limits around their API and so it's easy to get a 429 or 1015 error from their cloudflair firewall. If this happens, please change your IP or use dummy data on the frontend to test the UI. 
 
+
+The framework that the backend uses is Hapi, which is highly extensible and easy to work with. The application starts within the `index.ts` file where the server is initiated and the endpoints are registered with it. 
+
+To make the code easier to follow, I seperated out out each endpoint into its own file and the combinned similar endpoints into an array that gets exported to the main index file. Each endpoint is setup to use the `fetch` module to proxy requests to the blockchain.com API. For the purposes of the demo, I opted to make vaidation soft, howerver in a production environment I would apply more stringent tests to ensure the all parameters of valid.
