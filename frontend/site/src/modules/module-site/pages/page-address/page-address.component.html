@@ -2,44 +2,45 @@
 <main>
     <section data-name="address">
         <div data-name="holder">
-            <div data-name="top">
+            <div data-name="bitcoin-background"  *ngIf="!addressData.address"></div>
+            <div data-name="top" *ngIf="addressData.address">
                 <span>Bitcoin Address</span>
-                <strong>1FwYmGEjXhMtxpWDpUXwLx7ndLNfFQncKq</strong>
+                <strong>{{addressData.address}}</strong>
                 <div data-name="details">
                     <div data-name="info">
                         <strong>Balance: </strong>
-                        <span>10 BTC</span>
+                        <span>{{addressData.final_balance/BTCUnits.SATOSHIS}} BTC</span>
                     </div>
                     <div data-name="info">
                         <strong>Transactions: </strong>
-                        <span>150000</span>
+                        <span>{{addressData.n_tx}}</span>
                     </div>
                 </div>
             </div>
-            <div data-name="bottom">
-                <span>Transactions (150000)</span>
+            <div data-name="bottom" *ngIf="addressData.address">
+                <span>Transactions ({{addressData.n_tx}})</span>
                 <div data-name="transactions">
-                    <a href="javascript:void(0);" data-name="transaction"  *ngFor="let transaction of [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]">
+                    <a [href]="'/bitcoin/transaction?tx=' + tx.hash" data-name="transaction"  *ngFor="let tx of addressData.txs">
                         <div data-name="logo"></div>
                         <div data-name="overview">
-                            <strong>a6219d47d1113bd9e27d505171b28bbd60150b17361dfa3c49d76c4d4a51c7a2</strong>
+                            <strong>{{tx.hash}}</strong>
                             <div data-name="details">
                                 <div data-name="info">
                                     <strong>Fee: </strong>
-                                    <span>5 satoshi</span>
+                                    <span>{{tx.fee/BTCUnits.SATOSHIS}} BTC</span>
                                 </div>
                                 <div data-name="info">
                                     <strong>Block Height: </strong>
-                                    <span>5392933</span>
+                                    <span>{{tx.block_height}}</span>
                                 </div>
                                 <div data-name="info">
-                                    <strong>Monday, October 21, 2013 10:40:16 AM</strong>
+                                    <strong>{{ getDate(tx.time) }}</strong>
                                     <span></span>
                                 </div>
                             </div>
                         </div>
                         <div data-name="amount">
-                            <span>15.392 BTC</span>
+                            <span>-- BTC</span>
                         </div>
                     </a>
                 </div>
