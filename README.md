@@ -44,10 +44,36 @@ npm run dev:ssr
 
 ![CoinTracker-Preview-2](design/previews-readme/preview-frontend-start.png)
 
-At this point you can now interact with the demo by opening up a web browser and navigating to http://localhost:42000/.
+At this point you can now interact with the demo by opening up a web browser and navigating to http://localhost:4200/.
 
 
 ###  Design
+
+The entire UI for this demo can be found within the `design` folder; there you'll see a sketch filed named CoinTracker.sketch, as well as various previews of the application. 
+
+The idea when thinking of this design was to keep things simple by minimizing the amount of clicks needed to navigate through the application. Each major piece of the UI would be developed in Angular as a seperate page, while smaller aspects would be developed as reusuale components. The following is a summary of each page/components purpose and my throught process for creating it.
+
+#### **Page (Main)**
+![CoinTracker-Preview-3](design/previews/preview-main.png)
+
+#### **Page (Side Bar - No Addresses)**
+![CoinTracker-Preview-4](design/previews/preview-sidebar-noaddresses.png)
+
+#### **Page (Side Bar - Addresses)**
+![CoinTracker-Preview-5](design/previews/preview-sidebar-addresses.png)
+
+#### **Page (Side Bar - Add Address)**
+![CoinTracker-Preview-6](design/previews/preview-popup-add.png)
+
+#### **Page (Side Bar - Remove Address)**
+![CoinTracker-Preview-7](design/previews/preview-popup-remove.png)
+
+#### **Page (Address)**
+![CoinTracker-Preview-8](design/previews/preview-address.png)
+
+#### **Page (Transaction)**
+![CoinTracker-Preview-9](design/previews/preview-transaction.png)
+
 
 ###  Frontend Development Decisions
 
