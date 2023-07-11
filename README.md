@@ -101,7 +101,7 @@ Tapping on a transaction from the address page will reveal details about the tra
 
 ###  Frontend Development Decisions
 
-While React could have been used to create the frontend of this demo, I decided to use Angular for a number or reasons including: out of the box page routing, reusuable component library, and tooling. To get a better understanding of how the application is structured on the frontend, I'll explain the folder structure.
+While React could have been used to create the frontend of this demo, I decided to use Angular for a number of reasons including: out of the box page routing, reusuable component library, and tooling. To get a better understanding of how the application is structured on the frontend, I'll explain the folder structure.
 
 - **dist** - This contains the TypeScript and SASS compiled code that can be excuted directly with node. Files in this folder a generated on each save/build.
 - **dist_comprssed** - This contains the same files as dist/ except that they are tar gzipped for better compression
@@ -113,7 +113,7 @@ While React could have been used to create the frontend of this demo, I decided 
 
 To communicate with backend endpoints, I created a dedicated service called `BlockchainCOM` which defines any and all endpoints used by the frontend. More information about endpoints in the following section.
 
-> **Please Note**: There are some aspects of the frontend that I was unable to polish due to time constrant such as: validaton on the search and add address fields, and preventing non-BTC addresses from being added. 
+> **Please Note**: There are some aspects of the frontend that I was unable to polish due to time constrants such as: validaton on the search and add address fields, and preventing non-BTC addresses from being added. 
 
 
 ###  Backend Development Decisions
@@ -131,4 +131,4 @@ The response for each which follow the address lookup and transaction look up en
 
 The framework that the backend uses is Hapi, which is highly extensible and easy to work with. The application starts within the `index.ts` file where the server is initiated and the endpoints are registered with it. 
 
-To make the code easier to follow, I seperated out out each endpoint into its own file and the combinned similar endpoints into an array that gets exported to the main index file. Each endpoint is setup to use the `fetch` module to proxy requests to the blockchain.com API. For the purposes of the demo, I opted to make vaidation soft, howerver in a production environment I would apply more stringent tests to ensure the all parameters of valid.
+To make the code easier to follow, I seperated out out each endpoint into its own file and the combinned similar endpoints into an array that gets exported to the main index file. Each endpoint is setup to use the `fetch` module to proxy requests to the blockchain.com API. For the purposes of the demo, I opted to make validation soft, howerver in a production environment I would apply more stringent tests to ensure the all parameters of valid.
