@@ -82,6 +82,20 @@ Tapping on a transaction from the address page will reveal details about the tra
 ![CoinTracker-Preview-9](design/previews/preview-transaction.png)
 
 
-###  Frontend Development Decisions
+###  Frontend Development Decisionsa
+
+While React could have been used to create the frontend of this demo, I decided to use Angular for a number or reasons including: out of the box page routing, reusuable component library, and tooling. To get a better understanding of how the application is structured on the frontend, I'll explain the folder structure.
+
+- **dist** - This contains the TypeScript and SASS compiled code that can be excuted directly with node. Files in this folder a generated on each save/build.
+- **dist_comprssed** - This contains the same files as dist/ except that they are tar gzipped for better compression
+- **src/assets** - This contains all of the image and font assets that are used by Angular
+- **src/environments** - Development and production environment variables
+- **src/modules** - This contains all of the various components and modules of our application
+- **src/modules/module-site** - This is where the core the site is located such as the different pages, core element used, and layouts that get invoked on route changes.
+- **src/modules/module-shared** - This is common code shared between modules such as headers, footers, services, models, etc.
+
+To communicate with backend endpoints, I created a dedicated service called `BlockchainCOM` which defines any and all endpoints used by the frontend. More information about endpoints in the following section.
+
+> **Please Note**: There are some aspects of the frontend that I was unable to polish due to time constrant such as: validaton on the search and add address fields, and preventing non-BTC addresses from being added. 
 
 ###  Backend Development Decisions
