@@ -112,7 +112,7 @@ The backend is a simple API consisting of two endpoints that proxy directly to b
 
 The response for each which follow the address lookup and transaction look up endpoints from blockchain.com verbatum. 
 
-> **Please be advised**: The blockchain.com has very low limits around their API and so it's easy to get a 429 or 1015 error from their cloudflair firewall. If this happens, please change your IP or use dummy data on the frontend to test the UI. 
+> **Please be advised**: The blockchain.com has very low limits around their API and so it's easy to get a 429 or 1015 error from their cloudflare firewall. If this happens, please change your IP or use dummy data on the frontend to test the UI. 
 
 
 The framework that the backend uses is Hapi, which is highly extensible and easy to work with. The application starts within the `index.ts` file where the server is initiated and the endpoints are registered with it. 
