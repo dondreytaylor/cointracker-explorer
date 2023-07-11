@@ -20,13 +20,14 @@ export class HeaderSiteComponent implements OnInit {
   fieldAddAddress:string = ""; 
   fieldRemoveAddressIndex:number = -1
 
-  constructor(private route:ActivatedRoute, private router:Router, private windowScrollingService: services.WindowScrollingService) {
+  constructor(private addressTracker:services.AddressTrackerService, private route:ActivatedRoute, private router:Router, private windowScrollingService: services.WindowScrollingService) {
   }
 
   ngOnInit(): void {
     this.route.queryParams.pipe().subscribe(data=> {
       this.fieldSearch = data.addr || "";
     })
+    this.trackedAddresses = this.addressTracker.getAddresses()
   }
 
   openSidebar() {
@@ -60,12 +61,14 @@ export class HeaderSiteComponent implements OnInit {
   addAddress() {
     if (this.canAddAddress()) { 
       this.trackedAddresses.push(this.fieldAddAddress);
+      this.addressTracker.addAddress(this.fieldAddAddress);
       this.hidePopups();
     }
   }
 
   removeAddress() { 
     this.trackedAddresses.splice(this.fieldRemoveAddressIndex, 1);
+    this.addressTracker.updateAddresses(this.trackedAddresses);
     this.hidePopups();
   }
 

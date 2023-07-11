@@ -6,6 +6,15 @@ main {
     padding: 8rem 0;
 }
 
+ngx-qrcode {
+    display: block;
+    position: absolute;
+    right: 0;
+    @media (max-width: $mobile) {
+        display: none;
+    }
+}
+
 div[data-name="bitcoin-background"] {
     position: fixed;
     z-index: 0;

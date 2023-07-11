@@ -6,7 +6,7 @@
 import * as Hapi from '@hapi/hapi';
 
 // Fetch 
-import fetch from 'node-fetch';
+import fetch from 'node-fetch'; 
 
 /**
  *
@@ -15,20 +15,20 @@ import fetch from 'node-fetch';
  */
 let Endpoint: Hapi.ServerRoute =  {
     method: "GET",
-    path: "/v1/bitcoin/transaction",
+    path: "/v1/bitcoin/address/transactions",
     handler: async (request, h) => {
-        
-        // Excepts a transaction hash
-        let tx:string = request.query.tx != undefined ? request.query.tx : ""; 
+
+         // Excepts a address hash
+        let addr:string = request.query.addr != undefined ? request.query.addr : ""; 
 
         // Pagination parameters
         let page:number = parseInt(request.query.page) || 1; 
-        let pagesize:number = parseInt(request.query.pagesize) || 20; 
+        let pagesize:number = parseInt(request.query.pagesize) || 20;
 
         try { 
 
-            // Make a request to retrieve transaction details using blockchain API
-            let response = await fetch(`${process.env.BLOCKCHAIN_API_BASE_TX}/${tx}?page=${page}&pagesize=${pagesize}`);
+            // Make a request to retrieve address details using blockchain API
+            let response =  await fetch(`${process.env.BLOCKCHAIN_API_BASE_ADDR}/${addr}/tx?page=${page}&pagesize=${pagesize}`);
 
             // For debugging purposes we'll output what the response status code/text is
             console.log(response.status, response.statusText);

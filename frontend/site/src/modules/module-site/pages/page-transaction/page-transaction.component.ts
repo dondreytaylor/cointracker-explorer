@@ -16,7 +16,6 @@ export class PageTransactionComponent implements OnInit {
   BTCTransactionData = BTCTransactionData
 
   transactionData:any = {}
-  // transactionData:any = BTCTransactionData.Transactions["3c2b594017776a8f277c5c021564c2302cb4ecbb2997d257b2c916e01e5f4b24"];
   
   constructor(private blockchain:services.BlockchainCOM, private router: ActivatedRoute) { }
 

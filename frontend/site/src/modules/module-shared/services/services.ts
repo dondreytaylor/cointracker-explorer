@@ -6,4 +6,5 @@ export const SharedServicesList = [
   services.ValidationService,
   services.TitleMetaService,
   services.WindowScrollingService,
+  services.AddressTrackerService,
 ]

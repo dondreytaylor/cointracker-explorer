@@ -19,7 +19,8 @@ let Endpoint: Hapi.ServerRoute =  {
     handler: async (request, h) => {
 
          // Excepts a address hash
-        let addr:string = request.query.addr != undefined ? request.query.addr : ""; 
+        let addr:string = request.query.addr != undefined ? request.query.addr : "";
+
         try { 
 
             // Make a request to retrieve address details using blockchain API

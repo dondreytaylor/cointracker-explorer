@@ -12,13 +12,18 @@ export class BlockchainCOM {
   constructor(private http:HttpClient) {
   }
 
-  getBTCAddress(addr:string = ''): Observable<{addr:any}> {
-    let obs = this.http.get<{addr:any}>(`${environment.api.gateway.endpoint}/v1/bitcoin/address`, {params:{addr}})
+  getBTCAddress(addr:string = ''): Observable<any> {
+    let obs = this.http.get<any>(`${environment.api.gateway.endpoint}/v1/bitcoin/address`, {params:{addr}})
+    return obs
+  }
+
+  getBTCAddressTransactions(addr:string = '', page:number = 1, pagesize:number = 20): Observable<any> {
+    let obs = this.http.get<any>(`${environment.api.gateway.endpoint}/v1/bitcoin/address/transactions`, {params:{addr, page, pagesize}})
     return obs
   }
 
   getBTCTransaction(tx:string = ''): Observable<{tx:any}> {
-    let obs = this.http.get<{tx:any}>(`${environment.api.gateway.endpoint}/v1/bitcoin/transaction`, {params:{tx}})
+    let obs = this.http.get<any>(`${environment.api.gateway.endpoint}/v1/bitcoin/transaction`, {params:{tx}})
     return obs
   }
 

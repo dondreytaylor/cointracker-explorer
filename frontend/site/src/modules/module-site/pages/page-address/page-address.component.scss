@@ -6,6 +6,15 @@ main {
     padding: 8rem 0;
 }
 
+ngx-qrcode {
+    display: block;
+    position: absolute;
+    right: 0;
+    @media (max-width: $mobile) {
+        display: none;
+    }
+}
+
 div[data-name="bitcoin-background"] {
     position: fixed;
     z-index: 0;
@@ -70,6 +79,10 @@ section[data-name="address"] {
             margin: 0 0 1rem 0;
             font-family: $fontFamilyBold;
             font-style: italic;
+        }
+        app-button {
+            display: block;
+            max-width: 64rem;
         }
         div[data-name="transactions"] {
             a[data-name="transaction"] {

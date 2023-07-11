@@ -54,7 +54,8 @@ import { ClipboardModule } from 'ngx-clipboard';
     SharedPipesList,
     DragDropModule,
     BrowserAnimationsModule,
-        
+    NgxQRCodeModule,
+
     SharedElementsComponents,
     SharedFooterComponents,
     SharedSectionsComponents,

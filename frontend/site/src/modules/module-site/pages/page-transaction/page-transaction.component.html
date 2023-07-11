@@ -2,41 +2,42 @@
 <main>
     <section data-name="transaction">
         <div data-name="holder">
-            <div data-name="bitcoin-background"  *ngIf="!transactionData.hash"></div>
-            <div data-name="top" *ngIf="transactionData.hash">
+            <div data-name="bitcoin-background"  *ngIf="!transactionData.data || !transactionData.data.block_hash"></div>
+            <div data-name="top" *ngIf="transactionData.data && transactionData.data.block_hash">
+                <ngx-qrcode [value]="transactionData.data.block_hash"></ngx-qrcode>
                 <span>Bitcoin Transaction</span>
-                <strong>{{transactionData.hash}}</strong>
+                <strong>{{transactionData.data.block_hash}}</strong>
                 <div data-name="details">
                     <div data-name="info">
-                        <strong>-- BTC</strong>
+                        <strong>{{(transactionData.data.inputs_value-transactionData.data.outputs_value)/BTCUnits.SATOSHIS}} BTC</strong>
                     </div>
                     <div data-name="info">
                         <strong>Fee: </strong>
-                        <span>{{transactionData.fee/BTCUnits.SATOSHIS}} BTC</span>
+                        <span>{{transactionData.data.fee/BTCUnits.SATOSHIS}} BTC</span>
                     </div>
                     <div data-name="info">
                         <strong>Block: </strong>
-                        <span>{{transactionData.block_height || "--"}}</span>
+                        <span>{{transactionData.data.block_height || "--"}}</span>
                     </div>
                 </div>
             </div>
-            <div data-name="bottom" *ngIf="transactionData.hash">
+            <div data-name="bottom" *ngIf="transactionData.data && transactionData.data.block_hash">
                 <span>Details</span>
                 <div data-name="overview">
                     <div data-name="left">
                         <strong>From</strong>
                         <div data-name="inputs">
-                            <div data-name="input" *ngFor="let input of transactionData.inputs">
-                                <a [href]="'/bitcoin/address?addr='+ input.prev_out.addr">{{input.prev_out.addr}}</a>
-                                <span>{{input.prev_out.value/BTCUnits.SATOSHIS}} BTC</span>
+                            <div data-name="input" *ngFor="let input of transactionData.data.inputs">
+                                <a [href]="'/bitcoin/address?addr='+ (input.prev_addresses && input.prev_addresses[0] ? input.prev_addresses[0] : '--')">{{input.prev_addresses && input.prev_addresses[0] ? input.prev_addresses[0] : '--'}}</a>
+                                <span>{{input.prev_value/BTCUnits.SATOSHIS}} BTC</span>
                             </div>
                         </div>
                     </div>
                     <div data-name="right">
                         <strong>To</strong>
                         <div data-name="outputs">
-                            <div data-name="output"*ngFor="let output of transactionData.out">
-                                <a [href]="'/bitcoin/address?addr='+ output.addr">{{output.addr}}</a>
+                            <div data-name="output"*ngFor="let output of transactionData.data.outputs">
+                                <a [href]="'/bitcoin/address?addr='+ (output.addresses && output.addresses[0] ? output.addresses[0] : '')">{{output.addresses && output.addresses[0] ? output.addresses[0] : ''}}</a>
                                 <span>{{output.value/BTCUnits.SATOSHIS}} BTC</span>
                             </div>
                         </div>
