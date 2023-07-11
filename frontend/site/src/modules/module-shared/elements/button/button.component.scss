@@ -1,0 +1,69 @@
+@import "../../../../styles-variables";
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+button {
+  // box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+  // background-color: #00ace2;
+  background: linear-gradient(95.61deg, #00A8FF 0.41%, #00CCFF 100%);
+  display: block;
+  width: 100%;
+  padding: 0.95rem 0.5rem;
+  box-sizing: border-box;
+  border-radius: 0.3rem;
+  color: #ffffff;
+  text-decoration: none;
+  text-align: center;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  span {
+    font-family: $fontFamilyMedium;
+    font-size: 0.9rem;
+  }
+
+  &[disabled] {
+    box-shadow: none;
+    background: #eeeeee;
+    color: #b0b2b3;
+
+    div[data-name="loading-indicator"] {
+      background-image: url("/assets/module-shared/elements/button/loading-indicator-dark.svg");
+    }
+  }
+
+  &[size="fat"] {
+    padding: 1.2rem 0.5rem;
+  }
+
+  &[background-color="#4A4A4A"]:not([disabled]) {
+    background: #4a4a4a;
+  }
+
+  &[background-color="#f8d88b"]:not([disabled]) {
+    background: #f8d88b;
+    color: #4a4a4a;
+  }
+
+  div[data-name="loading-indicator"] {
+    position: absolute;
+    width: 1.7rem;
+    height: 1.7rem;
+    left: 1rem;
+    top: 50%;
+    margin-top: -0.8rem;
+    animation: rotation 0.8s infinite linear;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("/assets/module-shared/elements/button/loading-indicator.svg");
+  }
+}

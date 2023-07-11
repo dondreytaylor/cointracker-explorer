@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="26px" height="26px" viewBox="0 0 26 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon/checkbox (focused) copy 2</title>
+    <defs>
+        <rect id="path-1" x="1" y="1" width="22" height="22" rx="2"></rect>
+        <filter x="-15.9%" y="-11.4%" width="131.8%" height="131.8%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="1" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.1 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="2.6-dashboard/profile" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="dashboard/profile/info-bank/D---2.1-Financial-Status-Edit" transform="translate(-727.000000, -835.000000)" fill-rule="nonzero">
+            <g id="Financial-Status-Edit" transform="translate(488.000000, 330.000000)">
+                <g id="Type-of-Accounts" transform="translate(30.000000, 441.000000)">
+                    <g id="Group" transform="translate(210.000000, 64.000000)">
+                        <g id="Rectangle">
+                            <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                            <use fill="#00ACE2" xlink:href="#path-1"></use>
+                        </g>
+                        <polyline id="Path-2" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" points="7 11.6696723 10.4879725 15.1512027 17 8.65120275"></polyline>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

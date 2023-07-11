@@ -1,0 +1,136 @@
+@import '../../../../styles-variables';
+
+main {
+    background-color: #FAFAFA;
+    min-height: 100vh;
+    padding: 8rem 0 0 0;
+}
+
+div[data-name="bitcoin-background"] {
+    position: fixed;
+    z-index: 0;
+    width: 30rem;
+    height: 30rem;
+    left: 50%;
+    top: 20%;
+    margin-left: -15rem;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url('/assets/module-site/pages/page-landing/background-bitcoin.svg');
+    opacity: 0.5;
+}
+
+div[data-name="holder"] {
+    width: 95%;
+    margin: 0 auto;
+    max-width: 64rem;
+    position: relative;
+    @media (min-width: $maxDesktop) {
+      max-width: 80rem;
+    }
+}
+
+section[data-name="address"] {
+    div[data-name="top"] {
+        margin: 0 0 2rem 0;
+        & > span { 
+            color: #666666;
+            display: block;
+            font-size: 0.9rem;
+            margin: 0 0 0.4rem 0;
+            font-family: $fontFamilyBold;
+            font-style: italic;
+        }
+        & > strong {
+            display: block;
+            font-size: 1.3rem;
+            margin: 0 0 1rem 0; 
+            font-family: $fontFamilyLight;
+        }
+
+        div[data-name="details"] {
+            div[data-name="info"] {
+                display: inline-block;
+                padding: 0.5rem 1rem;
+                border-radius: 1rem;
+                background-color: #0182FF;
+                color: #FFFFFF;
+                font-size: 0.8rem;
+                margin: 0 1rem 0 0;
+            }
+        }
+    }
+
+    div[data-name="bottom"] {
+        & > span {
+            color: #666666;
+            display: block;
+            font-size: 1.1rem;
+            margin: 0 0 1rem 0;
+            font-family: $fontFamilyBold;
+            font-style: italic;
+        }
+        div[data-name="transactions"] {
+            a[data-name="transaction"] {
+                background-color: #FFFFFF;
+                border-radius: 0.5rem;
+                box-sizing: border-box;
+                padding: 2rem;
+                max-width: 64rem;
+                border: 0.05rem solid #E4E4E4;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                margin: 0 0 2rem 0;
+                text-decoration: none;
+                &:hover {
+                    border-color: #0182ff;
+                }
+                div[data-name="logo"] {
+                    content: ''; 
+                    width: 2.3rem;
+                    height: 2.3rem;
+                    background-position: center center;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    background-image: url('/assets/module-site/pages/page-address/bitcoin-icon.svg');
+                }
+                div[data-name="overview"] {
+                    & > strong {
+                        font-size: 0.9rem;
+                        color: #666666;
+                        display: block;
+                        margin: 0 0 0.5rem 0;
+                    }
+                    div[data-name="details"] {
+                        div[data-name="info"] {
+                            display: inline-block;
+                            font-size: 0.7rem;
+                            margin: 0 1.5rem 0 0; 
+                            font-family: $fontFamilyBold;
+                            text-decoration: none;
+                            color: #666666;
+                            opacity: 0.8;
+                            span {
+                                color: #0182FF;
+                            }
+                        }
+                    }
+                }
+                div[data-name="amount"] {
+                    span {
+                        display: inline-block;
+                        padding: 0.3rem 1rem;
+                        border-radius: 1rem;
+                        background-color: #D8D8D8;
+                        color: #4D4B4B;
+                        font-size: 0.75rem;
+                        margin: 0 1rem 0 0; 
+                        font-family: $fontFamilyBold;
+                    }
+                }
+            }
+        }
+    }
+}

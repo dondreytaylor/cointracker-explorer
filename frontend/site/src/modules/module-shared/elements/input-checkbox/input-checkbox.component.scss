@@ -1,0 +1,36 @@
+div[data-name="checkbox"] {
+  cursor: pointer;
+  white-space: nowrap;
+  div[data-name="check"] {
+      display: inline-block;
+      vertical-align: middle;
+      width: 1.5rem;
+      height: 1.5rem;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-image: url('/assets/module-shared/elements/input-checkbox/check-off.svg');
+  }
+  span {
+    margin: 0 0.5rem;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 0.95rem;
+    position: relative;
+    top: -0.1rem;
+    color: #47494A;
+    white-space: normal;
+  }
+  &.checked {
+    div[data-name="check"] {
+      background-image: url('/assets/module-shared/elements/input-checkbox/check-on.svg');
+    }
+  }
+  &.disabled {
+    &:not(.checked) {
+      span {
+        color: #949799;
+      }
+    }
+  }
+}

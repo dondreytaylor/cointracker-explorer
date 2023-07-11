@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="9px" viewBox="0 0 14 9" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon/down chevron</title>
+    <g id="2.1-dashboard/account" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="dashboard/account/transactions/T---1.3-Advanced-Search" transform="translate(-674.000000, -86.000000)" fill-rule="nonzero" stroke="#47494A" stroke-width="2">
+            <g id="header/subheader/profile-tab" transform="translate(0.000000, 60.000000)">
+                <g id="icon/down-chevron" transform="translate(666.000000, 15.000000)">
+                    <polyline id="Path-3" points="9.375 12.5 15 18.125 20.625 12.5"></polyline>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

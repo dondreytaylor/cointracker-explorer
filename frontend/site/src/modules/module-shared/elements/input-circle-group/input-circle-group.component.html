@@ -1,0 +1,3 @@
+<div data-name="checkbox-group">
+    <app-input-circle *ngFor="let state of checkedStates" [text]="state.text" [checked]="state.checked" (checkedChange)="onCheckChange($event)" [disabled]="disabled"></app-input-circle>
+<div>

@@ -1,0 +1,25 @@
+textarea {
+  border: 0.15rem solid #ebebeb;
+  border-radius: 0.3rem;
+  padding: 0.8rem 0.5rem;
+  outline: none;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #FFFFFF;
+  transition: border-color 0.3s ease;
+  min-height: 10rem;
+  font-size: 0.9rem;
+  
+  &:focus {
+    border-color: #00ace2;
+    transition: border-color 0.3s ease;
+  }
+
+  &::placeholder {
+      color: #DDDDDD;
+  }
+
+  &[readonly] {
+      color: #CCCCCC;
+  }
+}

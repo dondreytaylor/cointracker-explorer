@@ -1,0 +1,74 @@
+div[data-name="field-wrapper"] {
+  width: 100%;
+  position: relative;
+  display: flex;
+  border: 0.15rem solid #F7F7F8;
+  border-radius: 1.5rem;
+  background-color: #F7F7F8;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+  font-size: 0.9rem;
+
+  span {
+    padding: 0.8rem 0 0 0.5rem;
+    font-size: 1rem;
+    color: #DDDDDD;
+  }
+
+  input {
+    border: none;
+    padding: 0.7rem 0.3rem 0.7rem 2.5rem;
+    outline: none;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 0.85rem;
+    background-color: transparent;
+
+    /* Chrome, Safari, Edge, Opera */
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    /* Firefox */
+    &[type=number] {
+      -moz-appearance: textfield;
+    }
+
+    &::placeholder {
+        color: #DDDDDD;
+    }
+
+    &[readonly] {
+        color: #CCCCCC;
+    }
+  }
+
+  div[data-name="search-icon"] {
+    cursor: pointer;
+    width: 1.1rem;
+    height: 1.1rem;
+    position: absolute;
+    left: 1rem;
+    top: 0.65rem;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url('/assets/module-shared/elements/input-search-with-filter/icon-search.svg');
+    opacity: 0.5;
+  }
+  div[data-name="search-filter-icon"] {
+    display: none;
+    cursor: pointer;
+    width: 1.1rem;
+    height: 1.1rem;
+    position: absolute;
+    left: 1rem;
+    top: 0.65rem;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url('/assets/module-shared/elements/input-search-with-filter/icon-filters.svg');
+  }
+}

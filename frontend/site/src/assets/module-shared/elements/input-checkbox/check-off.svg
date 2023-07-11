@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="28px" height="28px" viewBox="0 0 28 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon/checkbox (focused) copy</title>
+    <defs>
+        <rect id="path-1" x="1" y="1" width="22" height="22" rx="2"></rect>
+        <filter x="-18.2%" y="-13.6%" width="136.4%" height="136.4%" filterUnits="objectBoundingBox" id="filter-2">
+            <feMorphology radius="0.5" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="1" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="1" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.1 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="2.6-dashboard/profile" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="dashboard/profile/info-bank/D---2.1-Financial-Status-Edit" transform="translate(-726.000000, -796.000000)" fill-rule="nonzero">
+            <g id="Financial-Status-Edit" transform="translate(488.000000, 330.000000)">
+                <g id="Type-of-Accounts" transform="translate(30.000000, 441.000000)">
+                    <g id="Rectangle" transform="translate(210.000000, 26.000000)">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                        <use stroke="#D8D8D8" stroke-width="1" fill="#FFFFFF" xlink:href="#path-1"></use>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

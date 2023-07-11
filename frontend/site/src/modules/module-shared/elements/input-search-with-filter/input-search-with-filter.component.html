@@ -1,0 +1,5 @@
+<div data-name="field-wrapper">
+  <div data-name="search-icon"></div>
+  <div data-name="search-filter-icon"></div>
+  <input type="text" [readonly]="disabled" [placeholder]="placeholder" [(ngModel)]="inputField" #field="ngModel" (ngModelChange)="onChange()" (keyup)="onKeyUp($event)" />
+</div>

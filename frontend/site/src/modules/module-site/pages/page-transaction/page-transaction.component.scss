@@ -1,0 +1,170 @@
+@import '../../../../styles-variables';
+
+main {
+    background-color: #FAFAFA;
+    min-height: 100vh;
+    padding: 8rem 0 0 0;
+}
+
+div[data-name="bitcoin-background"] {
+    position: fixed;
+    z-index: 0;
+    width: 30rem;
+    height: 30rem;
+    left: 50%;
+    top: 20%;
+    margin-left: -15rem;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url('/assets/module-site/pages/page-landing/background-bitcoin.svg');
+    opacity: 0.5;
+}
+
+div[data-name="holder"] {
+    width: 95%;
+    margin: 0 auto;
+    max-width: 64rem;
+    position: relative;
+    @media (min-width: $maxDesktop) {
+      max-width: 80rem;
+    }
+}
+
+section[data-name="transaction"] {
+    div[data-name="top"] {
+        margin: 0 0 2rem 0;
+        & > span { 
+            color: #666666;
+            display: block;
+            font-size: 0.9rem;
+            margin: 0 0 0.4rem 0;
+            font-family: $fontFamilyBold;
+            font-style: italic;
+        }
+        & > strong {
+            display: block;
+            font-size: 1.3rem;
+            margin: 0 0 1rem 0; 
+            font-family: $fontFamilyLight;
+        }
+
+        div[data-name="details"] {
+            div[data-name="info"] {
+                display: inline-block;
+                padding: 0.5rem 1rem;
+                border-radius: 1rem;
+                background-color: #0182FF;
+                color: #FFFFFF;
+                font-size: 0.8rem;
+                margin: 0 1rem 0 0;
+            }
+        }
+    }
+
+    div[data-name="bottom"] {
+        & > span {
+            color: #666666;
+            display: block;
+            font-size: 0.9rem;
+            margin: 0 0 0.4rem 0;
+            font-family: $fontFamilyBold;
+            font-style: italic;
+        }
+        div[data-name="overview"] {
+            background-color: #FFFFFF;
+            border-radius: 0.5rem;
+            box-sizing: border-box;
+            padding: 2rem 3rem;
+            max-width: 64rem;
+            border: 0.05rem solid #E4E4E4;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            div[data-name="left"] {
+                width: 48%;
+                position: relative;
+                padding: 0 0 0 2rem;
+                &::before {
+                    content: ''; 
+                    position: absolute;
+                    width: 2.3rem;
+                    height: 2.3rem;
+                    left: -1.3rem; 
+                    top: 0;
+                    background-position: center center;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    background-image: url('/assets/module-site/pages/page-transaction/bitcoin-icon.svg');
+                }
+                & > strong {
+                    font-size: 0.95rem;
+                    color: #666666;
+                    display: block;
+                    margin: 0 0 0.8rem 0;
+                    font-style: italic;
+                }
+                div[data-name="inputs"] {
+                    div[data-name="input"] {
+                        margin: 0 0 2rem 0;
+                        & > a {
+                            display: block;
+                            font-size: 0.9rem; 
+                            margin: 0 0 0.8rem 0;
+                            color: #4a4a4a;
+                            text-decoration: none;
+                            &:hover {
+                                color: #0182FF;   
+                            }
+                        }
+                        & > span {
+                            display: inline-block;
+                            padding: 0.3rem 1rem;
+                            border-radius: 1rem;
+                            background-color: #D8D8D8;
+                            color: #4D4B4B;
+                            font-size: 0.75rem;
+                            margin: 0 1rem 0 0; 
+                            font-family: $fontFamilyBold; 
+                        }
+                    }
+                }
+            }
+            div[data-name="right"] {
+                width: 48%;
+                & > strong {
+                    font-size: 0.95rem;
+                    color: #666666;
+                    display: block;
+                    margin: 0 0 0.5rem 0;
+                    font-style: italic;
+                }
+                div[data-name="outputs"] {
+                    div[data-name="output"] {
+                        margin: 0 0 2rem 0;
+                        & > a {
+                            display: block;
+                            font-size: 0.9rem; 
+                            margin: 0 0 0.8rem 0;
+                            color: #4a4a4a;
+                            text-decoration: none;
+                            &:hover {
+                                color: #0182FF;   
+                            }
+                        }
+                        & > span {
+                            display: inline-block;
+                            padding: 0.3rem 1rem;
+                            border-radius: 1rem;
+                            background-color: #D8D8D8;
+                            color: #4D4B4B;
+                            font-size: 0.75rem;
+                            margin: 0 1rem 0 0; 
+                            font-family: $fontFamilyBold;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

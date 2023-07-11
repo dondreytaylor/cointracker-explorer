@@ -1,0 +1,21 @@
+div[data-name="input-binary-selection"] {
+  a {
+    display: inline-block;
+    border: 0.05rem solid #CCCCCC;
+    color: #666666;
+    padding: 0.5rem 2rem 0 2rem;
+    height: 2rem;
+    border-radius: 2rem;
+    font-size: 0.9rem;
+    box-sizing: border-box;
+    text-decoration: none;
+    margin: 0 0.5rem 0.5rem 0;
+    &.selected, &:hover {
+      border-color: #00ACE2;
+      background-color: #00ACE2;
+      color: #FFFFFF;
+      text-align: center;
+      box-shadow: 0 2px 4px 0 rgba(0,0,0, 0.1), 0 2px 4px 0 rgba(0,0,0, 0.1);
+    }
+  }
+}

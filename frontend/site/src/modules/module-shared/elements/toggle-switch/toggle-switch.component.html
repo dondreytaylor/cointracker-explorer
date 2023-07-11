@@ -1,0 +1,4 @@
+<div data-name="toggle-switch">
+    <input #tgl class="tgl tgl-light" [ngClass]="{large: size == 'large'}" id="{{id}}" type="checkbox" [checked]="state" (change)="onStateChange(tgl.checked)" [disabled]="disabled"/>
+    <label class="tgl-btn" for="{{id}}"></label>
+</div>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon/check disable (circle)</title>
+    <defs>
+        <path d="M8,0 C12.418278,-8.11624501e-16 16,3.581722 16,8 C16,12.418278 12.418278,16 8,16 C3.581722,16 5.41083001e-16,12.418278 0,8 C-5.41083001e-16,3.581722 3.581722,8.11624501e-16 8,0 Z" id="path-1"></path>
+        <filter x="-21.9%" y="-15.6%" width="143.8%" height="143.8%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="1" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.1 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="2.6-dashboard/profile" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="dashboard/profile/info-bank/D---2.0-Financial-Status" transform="translate(-516.000000, -780.000000)" fill-rule="nonzero">
+            <g id="Financial-Status" transform="translate(488.000000, 330.000000)">
+                <g id="Have-you-ever-used?" transform="translate(30.000000, 395.000000)">
+                    <g id="icon/check-disable-(circle)" transform="translate(0.000000, 56.000000)">
+                        <g id="Rectangle">
+                            <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                            <use fill="#949799" xlink:href="#path-1"></use>
+                        </g>
+                        <polyline id="Path-2" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" points="4.66666667 7.77978156 6.9919817 10.1008018 11.3333333 5.7674685"></polyline>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

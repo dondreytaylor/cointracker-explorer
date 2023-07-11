@@ -1,0 +1,11 @@
+div[data-name="checkbox-group"] {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  app-input-circle {
+    width: 50%;
+    display: inline-block;
+    margin: 0 0 0.5rem 0;
+  }
+}

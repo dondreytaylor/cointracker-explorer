@@ -1,0 +1,21 @@
+@import '../../../../styles-variables';
+
+main {
+    background-color: #FAFAFA;
+    min-height: 100vh;;
+}
+
+div[data-name="bitcoin-background"] {
+    position: fixed;
+    z-index: 0;
+    width: 30rem;
+    height: 30rem;
+    left: 50%;
+    top: 20%;
+    margin-left: -15rem;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url('/assets/module-site/pages/page-landing/background-bitcoin.svg');
+    opacity: 0.5;
+}

@@ -1,0 +1,40 @@
+div[data-name="checkbox"] {
+  cursor: pointer;
+  white-space: nowrap;
+  div[data-name="check"] {
+      width: 1.5rem;
+      height: 1.5rem;
+      border-radius: 1.5rem;
+      background-color: #FFFFFF;
+      display: inline-block;
+      box-shadow: 0 1px 4px 1px rgba(0 ,0, 0, 0.1);
+      cursor: pointer;
+      vertical-align: middle;
+      margin: 0 0.3rem 0 0;
+  }
+  span {
+    margin: 0 0.3rem;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 0.95rem;
+    position: relative;
+    top: -0.1rem;
+    color: #47494A;
+    white-space: normal;
+  }
+  &.checked {
+    div[data-name="check"] {
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-image: url('/assets/module-shared/elements/input-circle-checkbox/check-on.svg');
+    }
+  }
+  &.disabled {
+    &:not(.checked) {
+      span {
+        color: #949799;
+      }
+    }
+  }
+}

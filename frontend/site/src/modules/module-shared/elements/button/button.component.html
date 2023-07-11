@@ -1,0 +1,4 @@
+<button [attr.size]="size" [disabled]="disabled" (click)="handleClick()" [style.border-radius]="borderRadius" [attr.background-color]="backgroundColor" [style.background-color]="backgroundColorStyle">
+  <div data-name="loading-indicator" *ngIf="isLoading"></div>
+  <span>{{isLoading && loadText.length > 0 ? loadText : text}}</span>
+</button>

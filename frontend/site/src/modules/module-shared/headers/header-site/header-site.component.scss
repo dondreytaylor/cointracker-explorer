@@ -1,0 +1,63 @@
+@import "../../../../styles-variables";
+
+header {
+  height: 5rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 5;
+  background-color: #FFFFFF;
+  border-bottom: 0.05rem solid #E4E4E4;
+
+  div[data-name="holder"] {
+    width: 95%;
+    margin: 0 auto;
+    max-width: 64rem;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: inherit; 
+    @media (min-width: $maxDesktop) {
+      max-width: 80rem;
+    }
+
+    div[data-name="logo"] {
+      width: 9rem;
+      height: 5rem;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-image: url('/assets/module-shared/headers/header/logo.svg');
+    }
+
+    div[data-name="field"] {
+      max-width: 40rem;
+      width: 100%;
+      app-input-text {
+        max-width: 40rem;
+        width: 90%;
+      }
+    }
+
+    a[data-name="menu"] {
+      width: 5rem;
+      height: 5rem;
+      text-align: center;
+      box-sizing: border-box;
+      padding: 1.3rem 0 0 0;
+      div {
+        width: 2rem;
+        height: 2rem;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-image: url('/assets/module-shared/headers/header/menu.svg');
+        display: inline-block;
+      }
+    }
+  }
+  
+}

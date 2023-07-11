@@ -1,0 +1,42 @@
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+a {
+  color: #00ace2;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  position: relative;
+  font-size: 0.9rem;
+
+  &[disabled] {
+    color: #b0b2b3;
+
+    div[data-name="loading-indicator"] {
+      background-image: url("/assets/module-shared/elements/link/loading-indicator-dark.svg");
+    }
+  }
+
+  &[background-color="#4A4A4A"]:not([disabled]) {
+    background-color: #4a4a4a;
+  }
+
+  div[data-name="loading-indicator"] {
+    position: absolute;
+    width: 1.4rem;
+    height: 1.4rem;
+    left: -1.4rem;
+    top: -0.1rem;
+    animation: rotation 0.8s infinite linear;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("/assets/module-shared/elements/link/loading-indicator-dark.svg");
+  }
+}

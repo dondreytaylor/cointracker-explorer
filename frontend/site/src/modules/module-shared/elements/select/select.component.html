@@ -1,0 +1,4 @@
+<select [disabled]="disabled" [(ngModel)]="optionSelected" [style.font-size]="fontSize" [style.height]="buttonHeight" [style.padding]="padding" [style.border-radius]="borderRadius" (change)="onStateChange()" (focus)="onFocus($event)" (blur)="onBlur($event)">
+    <option value="" *ngIf="!omitDefault">{{optionDefault}}</option>
+    <option *ngFor="let option of optionLabelValues" [value]="option.value">{{option.label}}</option>
+</select>

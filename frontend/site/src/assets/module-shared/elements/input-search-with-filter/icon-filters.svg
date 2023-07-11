@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon/filter</title>
+    <g id="1.2-know-money" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="know-money/money-meanigs/D---1.0-Money-Meanings" transform="translate(-1160.000000, -110.000000)">
+            <g id="subheader/know-money" transform="translate(0.000000, 90.000000)">
+                <g id="input/placeholder" transform="translate(932.000000, 10.000000)">
+                    <g id="Group" transform="translate(226.000000, 8.000000)">
+                        <rect id="bounds" x="0" y="0" width="24" height="24"></rect>
+                        <g id="filter-icon" transform="translate(3.000000, 3.000000)" fill-rule="nonzero" stroke="#4A4A4A" stroke-linecap="round" stroke-width="2">
+                            <line x1="0" y1="14.2941176" x2="10.5882353" y2="14.2941176" id="Line-3"></line>
+                            <line x1="14.4776552" y1="14.2941176" x2="18" y2="14.2941176" id="Line-3-Copy-3"></line>
+                            <line x1="0" y1="3.70588235" x2="3.17647059" y2="3.70588235" id="Line-3-Copy-4"></line>
+                            <line x1="7.41176471" y1="3.70588235" x2="18" y2="3.70588235" id="Line-3-Copy"></line>
+                            <line x1="3.17647059" y1="0.529411765" x2="3.17647059" y2="6.88235294" id="Line-5"></line>
+                            <line x1="14.2941176" y1="11.1176471" x2="14.2941176" y2="17.4705882" id="Line-5-Copy"></line>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

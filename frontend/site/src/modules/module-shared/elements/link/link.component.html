@@ -1,0 +1,4 @@
+<a href="javascript:void(0);" (click)="handleClick()" [attr.background-color]="backgroundColor">
+  <div data-name="loading-indicator" *ngIf="isLoading"></div>
+  <span>{{isLoading && loadText.length > 0 ? loadText : text}}</span>
+</a>

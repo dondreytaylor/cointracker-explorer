@@ -1,0 +1,17 @@
+div[data-name="loading-indicator-view"] {
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: rgba(248,248,248,0.9);
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    app-loading-indicator {
+      width: 2.5rem;
+      height: 2.5rem;
+      position: absolute;
+      top: 15rem;
+      left: 50%;
+      margin-left: -1.25rem;
+    }
+}

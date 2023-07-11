@@ -1,0 +1,22 @@
+<div data-name="field-wrapper">
+    <div data-name="selected" (click)="toggleDropdown()" [ngClass]="{open: isDropdownVisible, loading:isLoading}">
+        <div data-name="icon" *ngIf="showIcons && optionSelected != undefined && !isLoading" [ngStyle]="{'background-image': showIcons ? 'url(' + optionSelected.icon + ')' : false}" ></div>
+        <div data-name="details" *ngIf="!isLoading">
+            <strong>{{optionSelected != undefined ? optionSelected.heading : defaultSelectionHeading}}</strong>
+            <small>{{optionSelected != undefined ? optionSelected.subheading : ''}}</small>
+        </div>
+        <div data-name="loading-wrapper">
+            <div data-name="loading-indicator"></div>
+            <span>{{loadingText}}</span>
+        </div>
+    </div>
+    <div data-name="options" *ngIf="isDropdownVisible && options.length > 0">
+        <div data-name="option" *ngFor="let option of options; let i = index" (click)="onSelect(i)" [ngClass]="{selected: optionSelected?.value === option.value}">
+            <div data-name="icon" [ngStyle]="{'background-image': showIcons ? 'url(' + option.icon + ')' : false}" *ngIf="showIcons"></div>
+            <div data-name="details">
+              <strong>{{option.heading}}</strong>
+              <small>{{option.subheading}}</small>
+            </div>
+        </div>
+    </div>
+</div>

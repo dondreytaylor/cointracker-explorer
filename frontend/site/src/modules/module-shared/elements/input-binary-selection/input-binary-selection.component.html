@@ -1,0 +1,4 @@
+<div data-name="input-binary-selection">
+    <a href="javascript:void(0);" (click)="select(0)" [ngClass]="{selected: selected == selections[0]}">{{selections.length > 0 ? selections[0] : ''}}</a>
+    <a href="javascript:void(0);" (click)="select(1)" [ngClass]="{selected: selected == selections[1]}">{{selections.length > 1 ? selections[1] : ''}}</a>
+</div>
